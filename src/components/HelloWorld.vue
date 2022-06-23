@@ -1,13 +1,17 @@
 <!--
  * @Description: 
  * @Date: 2022-06-23 11:38:34
- * @LastEditTime: 2022-06-23 15:57:12
+ * @LastEditTime: 2022-06-23 16:24:45
 -->
 
 <template>
-  <h1>{{ msg }} {{ countNum }}</h1>
-  <button type="button" @click="count++">count is: {{ count }}</button>
-  <button @click="sendMsg">发送</button>
+    <h1>{{ msg }} {{ countNum }}</h1>
+    <button type="button" @click="count++">
+        count is: {{ count }}
+    </button>
+    <button @click="sendMsg">
+        发送
+    </button>
 </template>
 
 <script setup lang="ts">
@@ -28,7 +32,7 @@ const sendMsg = () => {
 }
 
 onMounted(() => {
-  console.log(this);
+  console.log(this)
 
 })
 defineExpose({
