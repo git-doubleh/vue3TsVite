@@ -1,11 +1,13 @@
 /*
  * @Description: 
  * @Date: 2022-06-23 14:09:37
- * @LastEditTime: 2022-06-23 14:10:38
+ * @LastEditTime: 2022-06-24 11:41:04
  */
 import Axios from 'axios'
-
-const baseURL = 'https://api.github.com'
+const {
+  VITE_APP_BASE
+} = import.meta.env
+const baseURL = VITE_APP_BASE
 
 const axios = Axios.create({
   baseURL,
@@ -40,7 +42,6 @@ axios.interceptors.response.use(
       const code = error.response.status
       const msg = error.response.data.message
       console.error(`[Axios Error]`, error.response)
-    } else {
     }
     return Promise.reject(error)
   }

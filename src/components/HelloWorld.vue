@@ -1,7 +1,7 @@
 <!--
  * @Description: 
  * @Date: 2022-06-23 11:38:34
- * @LastEditTime: 2022-06-23 16:24:45
+ * @LastEditTime: 2022-06-24 11:36:48
 -->
 
 <template>
@@ -16,6 +16,7 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, toRefs, reactive } from 'vue'
+import { getList } from '@/api/index' 
 
 defineProps<{ msg: string }>()
 
@@ -31,9 +32,8 @@ const sendMsg = () => {
   emits('sendMsg', 'son')
 }
 
-onMounted(() => {
-  console.log(this)
-
+onMounted(async() => {
+  await getList()
 })
 defineExpose({
   ...toRefs(data)
