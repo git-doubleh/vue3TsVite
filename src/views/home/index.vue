@@ -1,10 +1,10 @@
 <!--
  * @Description: 
  * @Date: 2022-06-23 11:49:22
- * @LastEditTime: 2022-06-23 16:29:10
+ * @LastEditTime: 2022-08-05 11:12:31
 -->
 <template>
-    <div>这是home</div>
+    <div>这是home, {{ userStores.name }}</div>
     <button @click="pageTo">
         跳转
     </button>
@@ -19,9 +19,13 @@
 import HelloWorld from '@/components/HelloWorld.vue'
 import { useRoute, useRouter } from 'vue-router'
 import { ref, reactive } from 'vue'
+import { userStore } from '@/store/modules/user'
 
 const router = useRouter()
 const HelloWorldRef = ref()
+
+const userStores = userStore()
+userStores.consoleMsg()
 
 const propsParam = reactive({
     msg: 'welcome'
@@ -45,6 +49,6 @@ const sendMsg = (val: string) => {
  * @description: 通过ref获取子组件数据
  */
 const getSon = () => {
-    console.log(HelloWorldRef.value.value.value)
+    console.log(HelloWorldRef.value.num)
 }
 </script>

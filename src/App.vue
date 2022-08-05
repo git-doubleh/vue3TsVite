@@ -1,11 +1,11 @@
 <!--
  * @Description: 
  * @Date: 2022-06-23 11:38:34
- * @LastEditTime: 2022-06-23 14:15:23
+ * @LastEditTime: 2022-06-24 11:53:55
 -->
 
 <template>
-  <router-view />
+    <RouterView />
 </template>
 
 <style>

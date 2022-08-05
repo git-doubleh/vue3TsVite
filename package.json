@@ -21,6 +21,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-vue": "^9.1.1",
+    "pinia": "^2.0.17",
     "sass": "^1.53.0",
     "vue": "^3.2.25",
     "vue-router": "4",

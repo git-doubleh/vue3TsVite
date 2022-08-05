@@ -1,13 +1,25 @@
 /*
  * @Description: 
  * @Date: 2022-06-23 11:58:57
- * @LastEditTime: 2022-06-23 14:24:08
+ * @LastEditTime: 2022-08-05 11:11:38
  */
-const state = {}
-const mutations = {}
-const actions = {}
-export default {
-    state,
-    mutations,
-    actions
+import { defineStore } from "pinia"
+interface IUserState {
+    name: string
+    msg?:string
 }
+export const userStore = defineStore({
+    id: 'user',
+    state: (): IUserState => {
+        return {
+            name: 'doubleh',
+            msg: ''
+        }
+    },
+    getters: {},
+    actions: {
+        consoleMsg() {
+            this.msg = this.name + ' nice'
+        }
+    }
+})
