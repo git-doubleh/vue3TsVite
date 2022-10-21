@@ -1,0 +1,8 @@
+{
+  "name": "vitepress-starer",
+  "version": "1.0.0",
+  "description": "文档说明",
+  "main": "index.js",
+  "author": "hh",
+  "license": "MIT"
+}
